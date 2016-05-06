@@ -1,0 +1,113 @@
+/* ------------------------------------------------------------ *\
+|* ------------------------------------------------------------ *|
+|* Nav bar, search, and nav
+|* ------------------------------------------------------------ *|
+\* ------------------------------------------------------------ */
+
+#search {
+    position: relative;
+    float: left;
+    width: 60px;
+    height: 60px;
+    margin-left: -60px;
+}
+#label {
+    width: 60px;
+    height: 60px;
+    position: relative;
+    z-index: 20;
+}
+#label label {
+    display: block;
+    width: 60px;
+    height: 60px;
+    background: url("../img/search.png") 0 0;
+    font-size: 0;
+    color: rgba(0, 0, 0, 0);
+    text-indent: -9999px;
+    cursor: pointer;
+}
+#label label:hover {
+    background: url("../img/search.png") -60px 0
+}
+#label.active label {
+    background: url("../img/search.png") -60px 0
+}
+#input {
+    position: absolute;
+    top: 0;
+    left: 60px;
+    width: 1050px;
+    height: 60px;
+    z-index: 5;
+    overflow: hidden;
+}
+#input input {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -1050px;
+    width: 1050px;
+    height: 100%;
+    margin: 0;
+    padding: 0 10px;
+    border: none;
+    background-color: #23688b;
+    color: #fff;
+    font-size: 18px;
+    -webkit-backface-visibility: none;
+    -moz-backface-visibility: none;
+    -ms-backface-visibility: none;
+    backface-visibility: none;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    -webkit-transition: left 0;
+    -moz-transition: left 0;
+    -ms-transition: left 0;
+    -o-transition: left 0;
+    transition: left 0;
+}
+#input input:focus {
+    outline: none
+}
+#input.focus {
+    z-index: 20
+}
+#input.focus input {
+    left: 0;
+    -webkit-transition: left 0.4s;
+    -moz-transition: left 0.4s;
+    -ms-transition: left 0.4s;
+    -o-transition: left 0.4s;
+    transition: left 0.4s;
+}
+nav {
+    width: 100%;
+    float: left;
+    padding-left: 10px;
+    position: relative;
+    z-index: 10;
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+nav li {
+    display: inline-block;
+    height: 60px;
+    line-height: 60px;
+    font-size: 24px;
+    font-family: "Oswald", sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+nav a {
+    display: block;
+    padding: 0 15px;
+    color: #c8c8c8;
+}
+nav a:hover {
+    color: #3296c8
+}
